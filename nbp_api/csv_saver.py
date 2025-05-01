@@ -1,7 +1,9 @@
 import os
 import csv
 
-CSV_FILE = "exchange_rates.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE = os.path.join(BASE_DIR, "exchange_rates.csv")
+
 
 
 def save_to_csv(data):

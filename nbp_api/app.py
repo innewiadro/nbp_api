@@ -1,10 +1,13 @@
+import os
 from csv_saver import save_to_csv
 from from_csv_reader import read_last_5_rows
 from api import get_currency_rate
 
-
-CSV_FILE = "/home/innewiadro/nbp_api/exchange_rates.csv"
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE = os.path.join(BASE_DIR, "exchange_rates.csv")
+"""
+CSV_FILE = "/home/innewiadro/nbp_api/exchange_rates.csv
+"""
 rates_to_save = []
 currency = ["USD", "EUR", "GBP", "CHF", "JPY"]
 
